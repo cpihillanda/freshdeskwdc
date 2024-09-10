@@ -1,0 +1,27 @@
+{
+    "name": "Freshdesk Connector",
+    "version": "1.0.0",
+    "tableau-version": {
+      "min": "2022.3"
+    },
+    "vendor": {
+      "name": "Altria",
+      "support-link": "https://altria.freshdesk.com",
+      "email": "none"
+    },
+    "permission": {
+      "api": {
+        "https://altria.freshdesk.com/": [
+          "GET"
+        ]
+      }
+    },
+    "auth": {
+      "type": "none"
+    },
+    "window": {
+      "height": 800,
+      "width": 600
+    }
+  }
+  
