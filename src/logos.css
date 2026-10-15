@@ -1,0 +1,70 @@
+/* Shared dimensions preserve the original artwork without stretching or cropping. */
+:root {
+  --company-logo-width: 210px;
+  --company-logo-height: 150px;
+}
+
+.company-logo-slot {
+  width: var(--company-logo-width);
+  max-width: 100%;
+  height: var(--company-logo-height);
+  margin: 28px 0;
+  overflow: visible;
+  line-height: 0;
+}
+
+img.company-logo,
+.protocol-wordmark img.company-logo {
+  display: block;
+  width: var(--company-logo-width);
+  max-width: 100%;
+  height: var(--company-logo-height);
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 4px;
+}
+
+.company-dialog-logo {
+  margin: 24px 0;
+}
+
+.protocol-dialog-logo {
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
+/* Display the original wordmark from the supplied cover, including its exact lettering. */
+.brand-original {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 216px;
+  height: 62px;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+
+.brand-original img {
+  position: absolute;
+  width: 626.667px;
+  height: auto;
+  max-width: none;
+  left: -198px;
+  top: -23px;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+@media (max-width: 760px) {
+  .brand-original {
+    width: 194.4px;
+    height: 55.8px;
+  }
+
+  .brand-original img {
+    width: 564px;
+    height: auto;
+    left: -178.2px;
+    top: -20.7px;
+  }
+}

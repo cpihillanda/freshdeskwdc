@@ -1,0 +1,12 @@
+/* Styles are render-blocking head links, never dependent on JavaScript execution. */
+@view-transition{navigation:none}
+::view-transition-old(root){animation:nav-fade-out .25s ease both}
+::view-transition-new(root){animation:nav-fade-in .36s cubic-bezier(.2,.8,.2,1) both}
+@keyframes nav-fade-out{to{opacity:0}}
+@keyframes nav-fade-in{from{opacity:0}to{opacity:1}}
+@supports not (view-transition-name:root){main{animation:none}}
+main:focus{outline:none}
+.navigation-status{position:fixed;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+html.navigation-loading:before{content:'';position:fixed;z-index:100;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d7ae5c,transparent);background-size:50% 100%;animation:navigation-progress 1.2s linear infinite;pointer-events:none}
+@keyframes navigation-progress{from{background-position:-100% 0}to{background-position:200% 0}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none!important}html.navigation-loading:before{animation:none;background:#d7ae5c}}

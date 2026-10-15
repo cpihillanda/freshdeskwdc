@@ -1,0 +1,5 @@
+{
+  "mode": "built-in image_gen",
+  "output": "public/team/chamod-pihillanda-clean.png",
+  "prompt": "Use case: precise-object-edit. Input is the exact portrait edit target. Remove ONLY the small light-grey four-point Gemini sparkle watermark at the bottom right corner, around x872 y1064 in this 928x1120 image. Fill that tiny area with the continuous black blazer fabric matching its surrounding texture and lighting. Keep absolutely everything else unchanged: the same person's identity, exact face, hair, beard, expression, skin, clothes, pose, original blue background, original framing and dimensions. No retouching, no face alterations, no crop, no new marks. Output the same portrait without the bottom-right watermark."
+}
