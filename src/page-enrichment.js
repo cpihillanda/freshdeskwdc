@@ -3,14 +3,6 @@ const tiles = items => `<div class="information-grid">${items.map(([title,copy],
 const block = (label,title,body) => `<section class="insight-section"><div class="insight-heading"><p class="eyebrow">${label}</p><h2>${title}</h2></div>${body}</section>`;
 const faq = items => `<div class="faq-list">${items.map(([question,answer])=>`<details><summary>${question}<i aria-hidden="true">+</i></summary><p>${answer}</p></details>`).join('')}</div>`;
 
-const leadership = `<section class="leadership-section insight-section" id="whos-behind" aria-labelledby="leadership-title">
-  <div class="insight-heading"><p class="eyebrow">THE PEOPLE BEHIND THE VISION</p><div><h2 id="leadership-title">Who’s behind.</h2><p class="leadership-intro">Meet the people behind Dark Consolidated and Protocol Tomorrow.</p></div></div>
-  <div class="leadership-grid">
-    <article class="leader-card"><div class="leader-photo"><img src="/team/menura-dolage.jpg" alt="Menura Dolage, Managing Director of Dark Consolidated" width="864" height="1222" /></div><div class="leader-info"><span class="eyebrow">DARK CONSOLIDATED LTD</span><h3>Menura Dolage</h3><p>Managing Director</p></div></article>
-    <article class="leader-card"><div class="leader-photo"><img src="/team/chamod-pihillanda-clean.png" alt="Chamod Pihillanda, CEO of Protocol Tomorrow" width="928" height="1120" /></div><div class="leader-info"><span class="eyebrow">PROTOCOL TOMORROW</span><h3>Chamod Pihillanda</h3><p>CEO</p></div></article>
-  </div>
-</section>`;
-
 export const companyEnrichment = {
   'protocol-tomorrow': block('SECURITY IN CONTEXT','Protect what your business depends on.',tiles([
     ['Understand the exposure','Cloud adoption, connected systems, and growing data flows create dependencies that are easy to overlook. A clear view of assets and access helps turn broad security concerns into focused priorities.'],
@@ -31,7 +23,7 @@ export const companyEnrichment = {
 
 export function pageEnrichment(route){
   if(route==='/')return `<section class="home-manifesto"><p class="eyebrow">THE POWER BEHIND INDEPENDENT AMBITION</p><h2>One foundation.<br /><span>Multiple frontiers.</span></h2><div><p>Dark Consolidated brings capital, strategy, and governance together so focused businesses can pursue their own opportunities. Cybersecurity. Digital storytelling. New markets. Each with a distinct identity and a shared long-term perspective.</p><a class="action" href="/about/">Inside the group ${arrow}</a></div></section>`;
-  if(route==='/about/')return leadership + block('THE GROUP MODEL','Shared strength. Independent execution.',tiles([
+  if(route==='/about/')return block('THE GROUP MODEL','Shared strength. Independent execution.',tiles([
     ['Capital & strategic direction','A group perspective connects investment decisions with long-term business priorities. The aim is to build durable operations and give each company a clear context for growth.'],
     ['Operations & infrastructure','Shared foundations let specialist teams concentrate on the work they understand best. Operational support and group-wide coordination create a stronger base for independent execution.'],
     ['Governance & accountability','Autonomy works best with clarity. A unified approach to governance helps align company decisions with the wider group’s direction while preserving distinct expertise and identity.'],

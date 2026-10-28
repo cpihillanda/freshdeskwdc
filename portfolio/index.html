@@ -77,18 +77,6 @@ body{background:radial-gradient(ellipse at 100% 0,#28180944,transparent 40%),#06
 .milestones{list-style:none;padding:0;margin:0 0 0 calc(33.333% + 15px)}.milestones li{display:flex;gap:23px;position:relative;padding:0 0 25px}.milestones li>span{width:32px;height:32px;border:1px solid #d7ae5c44;display:grid;place-items:center;flex-shrink:0;font-size:9px;color:#bca374;border-radius:50%;background:#15120d}.milestones li.current>span{background:#d7ae5c;color:#111}.milestones h3{font-size:22px;margin:3px 0 10px;letter-spacing:-.5px}.milestones p{font-size:13px;color:#b4a78f;margin:0;line-height:1.8}
 .home-manifesto{padding:55px 54px 60px;display:grid;grid-template-columns:1fr 1fr;gap:20px 60px;border-top:1px solid var(--line);background:linear-gradient(130deg,#15120d,#090909)}.home-manifesto>.eyebrow{grid-column:1/-1;font-size:9px;margin:0}.home-manifesto h2{font-size:45px;margin:0}.home-manifesto h2>span{color:#d7ae5c}.home-manifesto p:not(.eyebrow){font-size:14px;line-height:1.9;color:#b6aa92;max-width:590px}
 /* Native document transitions keep normal URLs and browser history. */
-.leadership-section{scroll-margin-top:28px}
-.leadership-intro{font-size:14px;color:#b6aa95;line-height:1.8;margin:17px 0 0}
-.leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:900px;margin:0 auto}
-.leader-card{min-width:0;overflow:hidden;border:1px solid #d7ae5c33;border-radius:4px;background:linear-gradient(135deg,#19150e,#0b0b09)}
-.leader-photo{aspect-ratio:4/5;overflow:hidden;background:#14130f;border-bottom:1px solid #d7ae5c33}
-.leader-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform .6s ease}
-.leader-card:hover .leader-photo img{transform:scale(1.025)}
-.leader-info{padding:26px 28px 29px}
-.leader-info .eyebrow{display:block;font-size:8px;letter-spacing:1.5px;margin-bottom:14px}
-.leader-info h3{font-size:27px;letter-spacing:-.7px;margin:0 0 9px;line-height:1.2}
-.leader-info>p{font-size:13px;color:#c5b697;line-height:1.5;margin:0}
-@media(max-width:760px){.leadership-grid{grid-template-columns:1fr;gap:23px;max-width:420px}.leader-info{padding:23px}.leader-info h3{font-size:25px}.leadership-intro{font-size:13px}}
 @view-transition{navigation:auto}
 ::view-transition-old(root){animation:page-out .25s ease both}
 ::view-transition-new(root){animation:page-in .45s cubic-bezier(.2,.8,.2,1) both}
